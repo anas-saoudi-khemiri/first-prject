@@ -11,56 +11,78 @@
     <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
     
-    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times</button>
     <a href="index.html" class="w3-bar-item w3-button">home</a>
-    <a href="Sportscars.html" class="w3-bar-item w3-button">Sports car</a>
-    <a href="suv.html" class="w3-bar-item w3-button">suv</a>
-    <a href="coupe.html" class="w3-bar-item w3-button">Coupe</a>
+    <a href="Sportscars.html" class="w3-bar-item w3-button">cars</a>
   </div>
     <!-- Page Content -->
     <div class="w3-teal">
         <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
         <div class="w3-container">
-            <div><input type="search" id="search"></div>
-          <h1>Sports car</h1>
+          <input type="text" id="search" placeholder="Search for cars..." onkeyup="filterCars()">
+          <h1>all cars</h1>
         </div>
       </div>
       <!-- content -->
-       
 
+    <section class="car-list" id="carList">
 
-<div class="grid-container">
-  <div class="item1"><div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRumdh-jMzAME4sGvQTwzzdDOiuaFaoNAAH4Q&s" alt="Avatar" style="width:600px;height:400px;">
+      <div class="car-item" data-name="Ferrari 488" data-type="sports">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Gs9v8on2skP8fPE4wx16FhlJfXrudYzO7A&s" alt="Ferrari 488">
+        <h3>Ferrari 488</h3>
+        <p class="type">Sports Car</p>
+        <p class="price">$280,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
       </div>
-      <div class="flip-card-back">
-        <h1>John Doe</h1> 
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+
+      <div class="car-item" data-name="Lamborghini Huracán" data-type="sports">
+        <img src="https://motorz.tn/wp-content/uploads/2024/06/Lamborghini-Huracan-STO-Image-7-1.webp" alt="Lamborghini Huracán">
+        <h3>Lamborghini Huracán</h3>
+        <p class="type">Sports Car</p>
+        <p class="price">$320,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
       </div>
-    </div>
-  </div>
-  </div>
 
-  <div class="item2">2</div>
-  <div class="item3">3</div>  
-  <div class="item4">4</div>
-  <div class="item5">5</div>
-  <div class="item6">6</div>
-  <div class="item7">7</div>
-  <div class="item8"><img src="https://img.freepik.com/free-vector/realistic-silhouette-sport-car-body-editable-text-blurry-purple-particles-vector-illustration_1284-30198.jpg" alt=""></div>  
-  <div class="item9">9</div>
-  <div class="item10">10</div>
-  <div class="item11">11</div>
-  <div class="item12">12</div>
-  <div class="item13">13</div>
-  <div class="item14">14</div>
-  <div class="item15">15</div>
-</div>
+      <div class="car-item" data-name="Porsche Cayenne" data-type="suv">
+        <img src="https://img.20mn.fr/zdgJBb7-TRuBtkgcEaOkfCk/1444x920_porsche-cayenne-turbo-gt" alt="Porsche Cayenne">
+        <h3>Porsche Cayenne</h3>
+        <p class="type">SUV</p>
+        <p class="price">$100,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
+      </div>
 
+      <div class="car-item" data-name="Range Rover Sport" data-type="suv">
+        <img src="https://www.argusautomobile.tn/wp-content/uploads/2018/12/SPORT.jpg" alt="Range Rover Sport">
+        <h3>Range Rover Sport</h3>
+        <p class="type">SUV</p>
+        <p class="price">$120,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
+      </div>
 
-    <script src="./main.js"></script>
+      <div class="car-item" data-name="BMW X6" data-type="suv">
+        <img src="https://editorial.pxcrush.net/carsales/general/editorial/bmw-x6-6706.jpg?width=1024&height=682" alt="BMW X6">
+        <h3>BMW X6</h3>
+        <p class="type">SUV</p>
+        <p class="price">$85,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
+      </div>
+
+      <div class="car-item" data-name="Audi R8" data-type="sports">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDeCroC1aHZPrJeIl-L391Q4cdMiHBIfTu2Q&s" alt="Audi R8">
+        <h3>Audi R8</h3>
+        <p class="type">Sports Car</p>
+        <p class="price">$150,000</p>
+        <a href="payment.html"><button class="details-btn" >buy</button></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p> 2024 Car Sale. All rights reserved.</p>
+  </footer>
+            
+  
+     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+     <script src="./main.js"></script>
 </body>
 </html>

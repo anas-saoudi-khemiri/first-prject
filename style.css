@@ -4,67 +4,175 @@
   right: 10px;
 }
 
-
-
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    gap: 10px;
-    
-    padding: 10px;
+/* a */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  .grid-container > div {
-    
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  main {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .search-section {
+    margin-bottom: 40px;
+  }
+  
+  #searchInput {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  #searchInput:focus {
+    border-color: #e74c3c;
+  }
+  
+  .filter-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #e74c3c;
+  }
+  
+  .car-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .car-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .car-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .car-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .car-item h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  .car-item .type {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .car-item .price {
+    font-size: 20px;
+    color: #e74c3c;
+    margin-top: 10px;
+  }
+  
+  button.details-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button.details-btn:hover {
+    background-color: #e74c3c;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-    font-size: 30px;
   }
   
-  .item8 {
-    grid-area: 1 / 2 / 5 / 6;
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
   }
+  
 
 
 
-.flip-card {
-  background-color: transparent;
-  width: 600px;
-  height: 400px;
-  perspective: 1000px;
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
+  
+  
